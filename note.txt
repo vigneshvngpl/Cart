@@ -1,0 +1,54 @@
+json server
+------------
+
+npm i --save json-server
+
+
+json server running
+=====================
+
+npx json-server --watch db.json --port 3000
+
+
+
+
+lazy loading
+-------------
+
+used in traffic affected pages in angular to make the running fast 
+the pages are created under lazy loaded module
+                            -------------------
+
+lazy loading module - loading time is less   
+
+ creation of lazy module-   ng g module moduleName --route moduleName --module app.module.ts 
+                                                    if routing needed          in which module under want to create  
+
+new module-
+-----------
+
+ng g m moduleName --route
+                    if route needed
+
+
+*root module(app module)
+    - root component(app component)
+    * lazy loaded module(product module)
+        -lazy loaded root component(product component) automatically generate 
+        -new components
+    * normal module(site layout)
+        - new components (header footer) need to create bcz normal module       
+
+  lazy module path is in app routing module        
+
+  to export and import components from one module to another
+  -------------------------------------------------------------
+  import by module moduleName
+  and export by component name           
+
+  ActivatedRoute   in angular (already in angular no module need to be added)
+  -----------------------------
+
+  a class used to access params from web url
+
+    params() -method-asynchronous method
