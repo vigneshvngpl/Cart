@@ -1,1 +1,53 @@
-<p>add works!</p>
+<h1 class="text-center">Add new Product </h1>
+<form class="w-50 mx-auto text-center" [formGroup]="addForm">
+
+
+    <input type="text" formControlName="id" placeholder="Product Id" name="pid" class="form-control mt-3" id="pid"
+        aria-describedby="emailHelp">
+
+        <div class="mt-1" *ngIf="(this.addForm.get('id')?.errors)&&(this.addForm.get('id')?.touched)"><p>Id contains only number</p></div>
+
+
+ <input type="text" formControlName="pname" placeholder="Product Name" name="pnm" class="form-control mt-3" id="pnm">
+ <div class="mt-1" *ngIf="(this.addForm.get('pname')?.errors)&&(this.addForm.get('pname')?.touched)"><p>Error in format</p></div>
+ 
+
+
+    <input type="text" formControlName="catid" placeholder="Category Id" class="form-control mt-3" name="cid" id="cid">
+    <div class="mt-1" *ngIf="(this.addForm.get('catid')?.errors)&&(this.addForm.get('catid')?.touched)"><p>category consists only number</p></div>
+
+
+    <input type="text" formControlName="desc" placeholder="Description" class="form-control mt-3" name="desc" id="desc">
+    <div class="mt-1" *ngIf="(this.addForm.get('desc')?.errors)&&(this.addForm.get('desc')?.touched)"><p>Error in format</p></div>
+
+
+    <input type="text" formControlName="price" placeholder="Product Price" class="form-control mt-3" name="prce" id="prce">
+    <div class="mt-1" *ngIf="(this.addForm.get('price')?.errors)&&(this.addForm.get('price')?.touched)"><p> Enter valid price</p></div>
+
+
+    <input type="text" formControlName="avilble" placeholder="Is Available" class="form-control mt-3" name="avlbl" id="avlbl">
+    <div class="mt-1" *ngIf="(this.addForm.get('avilble')?.errors)&&(this.addForm.get('avilble')?.touched)"><p>Id contains only number</p></div>
+
+
+    <input type="text" formControlName="Image" placeholder="ProductImage" class="form-control mt-3" name="img" id="img">
+    <div class="mt-1" *ngIf="(this.addForm.get('Image')?.errors)&&(this.addForm.get('Image')?.touched)"><p>Id contains only number</p></div>
+
+
+    <input type="text" formControlName="ratng" placeholder="Rating" class="form-control mt-3" name="rtng" id="rtng">
+    <div class="mt-1" *ngIf="(this.addForm.get('ratng')?.errors)&&(this.addForm.get('ratng')?.touched)"><p>Rating contains only number</p></div>
+
+
+    <input type="text" formControlName="reviw" placeholder="Review" class="form-control mt-3" name="rvw" id="rvw">
+    <div class="mt-1" *ngIf="(this.addForm.get('reviw')?.errors)&&(this.addForm.get('reviw')?.touched)"><p>Review contains only number</p></div>
+
+
+    <input type="text" formControlName="vndrnme" placeholder="vendorName" class="form-control mt-3" name="vndnm" id="vndnm">
+    <div class="mt-1" *ngIf="(this.addForm.get('vndrnme')?.errors)&&(this.addForm.get('vndrnme')?.touched)"><p>Error in format</p></div>
+
+
+    <input type="text" formControlName="warrnty" placeholder="warrenty" class="form-control mt-3" name="wrnt" id="wrnt">
+    <div class="mt-1" *ngIf="(this.addForm.get('warrnty')?.errors)&&(this.addForm.get('warrnty')?.touched)"><p>Warranty contains only number</p></div>
+
+
+    <button type="submit" class="btn btn-secondary mt-3 mb-2 ">Add</button>
+</form>

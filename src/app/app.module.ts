@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 
 import { SiteLayoutModule } from './site-layout/site-layout.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     SiteLayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
     
 
   ],

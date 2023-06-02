@@ -10,6 +10,7 @@ import { DataService } from '../service/data.service';
 export class ViewAllComponent {
 
   allProductArray:any
+  filterProductsData:any
 
   constructor(private ds:DataService) { }
 
@@ -21,8 +22,16 @@ export class ViewAllComponent {
     this.ds.viewAllProducts().subscribe((result:any)=>{
       this.allProductArray=result
       console.log(this.allProductArray);
+      this.filterProductsData=this.allProductArray
       
     })
+  }
+
+  filterProducts(catId:any){
+
+    this.filterProductsData=this.allProductArray.filter(
+      (item:any)=>item.categoryId==catId || catId==""
+    )
   }
 
 }

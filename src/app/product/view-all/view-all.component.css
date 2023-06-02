@@ -3,3 +3,52 @@ img{
  
      
  }
+
+ .filter{
+    transition: 1s ease-in-out all ;
+    display: flex;
+    justify-content: space-evenly;
+ }
+
+ .filter a{
+
+    text-decoration: none;
+    color: inherit;
+ }
+
+ .filter a:hover{
+    transform: scale(1.2);
+ }
+ .filter div{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+ }
+
+ .filter .allproduct{
+   height: 150px;
+   background-image: url("https://i.postimg.cc/qM2Mnqp4/allproduct.jpg");
+   background-repeat: no-repeat;
+   background-size:cover;
+ }
+ 
+ .filter .cricket{
+   height: 150px;
+   background-image: url("https://i.postimg.cc/VLmxNWL9/cricket.jpg");
+   background-repeat: no-repeat;
+   background-size:cover;
+ }
+ .filter .football{
+   height: 150px;
+   background-image: url("https://i.postimg.cc/6p58JP7D/football.jpg");
+   background-repeat: no-repeat;
+   background-size:cover;
+ }
+ .filter .skating{
+   height: 150px;
+   background-image: url("https://i.postimg.cc/vmx9kKkG/skating.jpg");
+   background-repeat: no-repeat;
+   background-size:cover;
+ }
+
+
+ 
+
